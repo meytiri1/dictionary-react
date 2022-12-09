@@ -3,13 +3,13 @@
 }
 
 .App-logo {
-  display: block;
-  margin: 0 auto;
   max-width: 14em;
 }
 
 .App-header {
-  background-color: #fff;
-  min-height: max-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 4em;
   font-size: calc(10px + 2vmin);
 }
