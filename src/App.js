@@ -1,5 +1,6 @@
 import logo from "./logo.svg";
 import "./App.css";
+import Dictionary from "./Dictionary";
 
 function App() {
   return (
@@ -10,9 +11,13 @@ function App() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={logo} className="App-logo" alt="logo" />
+          <img src={logo} className="App-logo img-fluid" alt="logo" />
         </a>
       </header>
+      <main>
+        <Dictionary />
+      </main>
+      <footer className="App-footer">Coded by Michelle Köhler</footer>
     </div>
   );
 }
