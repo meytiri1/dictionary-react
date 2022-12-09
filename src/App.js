@@ -17,7 +17,16 @@ function App() {
       <main>
         <Dictionary />
       </main>
-      <footer className="App-footer">Coded by Michelle Köhler</footer>
+      <footer className="App-footer">
+        Coded by{" "}
+        <a
+          href="https://github.com/meytiri1/dictionary-react"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Michelle Köhler
+        </a>
+      </footer>
     </div>
   );
 }
