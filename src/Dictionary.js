@@ -6,10 +6,15 @@ import "./Dictionary.css";
 export default function Dictionary() {
   const [keyword, setKeyword] = useState("");
   const [results, setResults] = useState(null);
+  const [error, setError] = useState({ noData: false });
 
   function handleResponse(response) {
-    console.log(response.data[0]);
+    console.log(response.data.length);
     setResults(response.data[0]);
+    if (!response.data.length) {
+      setError({ noData: true });
+    }
+    console.log(error);
   }
 
   function search(event) {
@@ -22,13 +27,27 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
 
-  return (
-    <div className="Dictionary">
-      <h1>Dictionary App</h1>
-      <form onSubmit={search}>
-        <input type="search" onChange={handleKeywordChange} />
-      </form>
-      <Results results={results} />
-    </div>
-  );
+  if (error.noData) {
+    return (
+      <div className="Dictionary">
+        <h1>Dictionary App</h1>
+        <form onSubmit={search}>
+          <input type="search" onChange={handleKeywordChange} />
+          <input type="submit" value="Search" onSubmit={search} />
+          <p>Hello world</p>
+        </form>
+      </div>
+    );
+  } else {
+    return (
+      <div className="Dictionary">
+        <h1>Dictionary App</h1>
+        <form onSubmit={search}>
+          <input type="search" onChange={handleKeywordChange} />
+          <input type="submit" value="Search" onSubmit={search} />
+        </form>
+        <Results results={results} />
+      </div>
+    );
+  }
 }
