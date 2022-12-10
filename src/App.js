@@ -1,10 +1,18 @@
-import logo from "./logo.svg";
+import logo from "./images/logo.svg";
 import "./App.css";
 import Dictionary from "./Dictionary";
+import background from "./images/background3.jpg";
 
 function App() {
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        maxWidth: `100vh`,
+      }}
+    >
       <header className="App-header">
         <a
           href="https://bright-centaur-7034e8.netlify.app/"
