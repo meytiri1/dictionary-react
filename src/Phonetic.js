@@ -2,8 +2,6 @@ import React from "react";
 import { Howl } from "howler";
 
 export default function Phonetic(props) {
-  console.log(props.phonetic);
-
   function soundPlay() {
     const sound = new Howl({
       src: props.phonetic.audio,

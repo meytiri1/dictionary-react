@@ -11,7 +11,7 @@ function App() {
           target="_blank"
           rel="noreferrer noopener"
         >
-          <img src={logo} className="App-logo img-fluid" alt="logo" />
+          <img src={logo} className="App-logo" alt="logo" />
         </a>
       </header>
       <main>
