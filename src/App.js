@@ -3,16 +3,20 @@ import "./App.css";
 import Dictionary from "./Dictionary";
 import background from "./images/background3.jpg";
 
+const styles = {
+  container: {
+    backgroundImage: `url(${background})`,
+    backgroundPosition: "center",
+    backgroundSize: "cover",
+    backgroundRepeat: "no-repeat",
+    width: "100vw",
+    height: "100vh",
+  },
+};
+
 function App() {
   return (
-    <div
-      className="App"
-      style={{
-        backgroundImage: `url(${background})`,
-        backgroundRepeat: "no-repeat",
-        maxWidth: `100vh`,
-      }}
-    >
+    <div className="App" style={styles.container}>
       <header className="App-header">
         <a
           href="https://bright-centaur-7034e8.netlify.app/"
