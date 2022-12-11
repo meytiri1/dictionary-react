@@ -41,11 +41,23 @@ export default function Dictionary() {
   } else {
     return (
       <div className="Dictionary">
-        <h1>Dictionary App</h1>
-        <form onSubmit={search}>
-          <input type="search" onChange={handleKeywordChange} />
-          <input type="submit" value="Search" onSubmit={search} />
-        </form>
+        <div className="card">
+          <h1>Dictionary App</h1>
+          <form onSubmit={search}>
+            <input
+              type="search"
+              placeholder="Type a word"
+              onChange={handleKeywordChange}
+              className="searchBar"
+            />
+            <input
+              type="submit"
+              value="Search"
+              onSubmit={search}
+              className="searchButton"
+            />
+          </form>
+        </div>
         <Results results={results} />
       </div>
     );
