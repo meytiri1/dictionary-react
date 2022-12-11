@@ -1,22 +1,10 @@
 import logo from "./images/logo.svg";
 import "./App.css";
 import Dictionary from "./Dictionary";
-import background from "./images/background3.jpg";
-
-const styles = {
-  container: {
-    backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
-    backgroundSize: "cover",
-    backgroundRepeat: "no-repeat",
-    width: "100vw",
-    height: "100vh",
-  },
-};
 
 function App() {
   return (
-    <div className="App" style={styles.container}>
+    <div className="App">
       <header className="App-header">
         <a
           href="https://bright-centaur-7034e8.netlify.app/"

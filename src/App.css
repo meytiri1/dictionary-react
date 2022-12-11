@@ -1,4 +1,5 @@
 .App {
+  background: #d5c3ed;
   margin: 0;
 }
 
@@ -10,11 +11,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 4em;
+  height: 4em;
   font-size: calc(10px + 2vmin);
 }
 
 .App-footer {
-  margin: 2em auto;
+  margin: 4em auto 0 auto;
   text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 2em;
 }
