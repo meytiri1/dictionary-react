@@ -16,7 +16,9 @@ export default function Phonetic(props) {
   if (props.phonetic.audio && props.phonetic.text) {
     return (
       <div className="Phonetic">
-        <button onClick={soundPlay}>Listen</button>
+        <button onClick={soundPlay} className="btn btn-primary me-3">
+          Listen
+        </button>
         <span>{props.phonetic.text}</span>
       </div>
     );
@@ -31,7 +33,9 @@ export default function Phonetic(props) {
       if (props.phonetic.audio) {
         return (
           <div className="Phonetic">
-            <button onClick={soundPlay}>Listen</button>
+            <button onClick={soundPlay} className="btn btn-primary me-3">
+              Listen
+            </button>
           </div>
         );
       } else {

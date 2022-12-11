@@ -41,7 +41,7 @@ export default function Dictionary() {
   } else {
     return (
       <div className="Dictionary">
-        <div className="card">
+        <section className="text-center">
           <h1>Dictionary App</h1>
           <form onSubmit={search}>
             <input
@@ -57,7 +57,7 @@ export default function Dictionary() {
               className="searchButton"
             />
           </form>
-        </div>
+        </section>
         <Results results={results} />
       </div>
     );

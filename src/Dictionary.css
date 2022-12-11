@@ -35,6 +35,24 @@
   background: rgb(177, 72, 230);
 }
 
+.Dictionary section {
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  margin: 4em auto;
+  max-width: 80%;
+  padding: 35px;
+  text-align: left;
+}
+
 .Dictionary h2 {
   font-size: 2rem;
+}
+
+.Dictionary .Phonetic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
