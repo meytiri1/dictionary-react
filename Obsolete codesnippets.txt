@@ -1,5 +1,7 @@
 .Dictionary component styling:
 
+import background from "./images/background4.jpg";
+
 const styles = {
   container: {
     backgroundImage: `url(${background})`,
