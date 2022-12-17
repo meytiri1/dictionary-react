@@ -1,35 +1,24 @@
-.Dictionary .card {
-  background-color: rgba(255, 255, 255, 0.4);
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(15px);
-  margin: 4em auto;
-  max-width: 80%;
-  padding: 35px;
-  text-align: center;
-}
-
 .Dictionary h1 {
   font-size: 3rem;
   margin-bottom: 1em;
 }
 
-.Dictionary .searchBar {
-  background: rgba(0, 0, 0, 0.25);
+.Dictionary input {
   border: none;
   border-radius: 10px;
+  margin: 10px;
   padding: 10px 30px;
+  width: 100%;
+}
+
+.Dictionary .searchBar {
+  background: rgba(0, 0, 0, 0.25);
 }
 
 .Dictionary .searchButton {
   background: darkorchid;
-  border: none;
-  border-radius: 10px;
   color: #fff;
   font-weight: 500;
-  margin-left: 20px;
-  padding: 10px 30px;
 }
 .Dictionary .searchButton:hover {
   background: rgb(177, 72, 230);
@@ -43,8 +32,12 @@
   backdrop-filter: blur(15px);
   margin: 4em auto;
   max-width: 80%;
-  padding: 35px;
+  padding: 45px;
   text-align: left;
+}
+
+.Dictionary .hint {
+  font-size: 0.69rem;
 }
 
 .Dictionary h2 {
