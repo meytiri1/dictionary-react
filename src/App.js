@@ -1,10 +1,20 @@
 import logo from "./images/logo.svg";
 import "./App.css";
 import Dictionary from "./Dictionary";
+import background from "./images/background3.jpg";
+
+const styles = {
+  container: {
+    backgroundImage: `url(${background})`,
+    backgroundPosition: "center",
+    backgroundSize: "100vw",
+    backgroundRepeat: "repeat-y",
+  },
+};
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" style={styles.container}>
       <header className="App-header">
         <a
           href="https://bright-centaur-7034e8.netlify.app/"
@@ -15,7 +25,7 @@ function App() {
         </a>
       </header>
       <main>
-        <Dictionary />
+        <Dictionary defaultKeyword="sunset" />
       </main>
       <footer className="App-footer">
         Coded by{" "}
