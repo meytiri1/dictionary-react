@@ -1,0 +1,10 @@
+:root {
+  --primary-button: #9932cc;
+  --secondary-button: #cf40b6;
+  --tertiary-button: #5149c9;
+}
+
+.Results h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}

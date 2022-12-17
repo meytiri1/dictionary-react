@@ -1,5 +1,6 @@
 import React from "react";
 import { Howl } from "howler";
+import "./Phonetics.css";
 
 export default function Phonetic(props) {
   function soundPlay() {
@@ -16,24 +17,24 @@ export default function Phonetic(props) {
   if (props.phonetic.audio && props.phonetic.text) {
     return (
       <div className="Phonetic">
-        <button onClick={soundPlay} className="btn btn-primary me-3">
+        <button onClick={soundPlay} className="btn me-4">
           Listen
         </button>
-        <span>{props.phonetic.text}</span>
+        <span className="my-auto">{props.phonetic.text}</span>
       </div>
     );
   } else {
     if (props.phonetic.text) {
       return (
         <div className="Phonetic">
-          <span>{props.phonetic.text}</span>
+          <span className="my-auto">{props.phonetic.text}</span>
         </div>
       );
     } else {
       if (props.phonetic.audio) {
         return (
           <div className="Phonetic">
-            <button onClick={soundPlay} className="btn btn-primary me-3">
+            <button onClick={soundPlay} className="btn me-4">
               Listen
             </button>
           </div>

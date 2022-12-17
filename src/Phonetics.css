@@ -1,0 +1,19 @@
+:root {
+  --primary-button: #9932cc;
+  --secondary-button: #cf40b6;
+  --tertiary-button: #5149c9;
+}
+
+.Phonetic button {
+  background: var(--secondary-button);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 13px;
+  padding: 8px 18px;
+  transition: all 150ms ease-in-out;
+}
+.Phonetic button:hover {
+  background: rgb(219, 103, 199);
+  color: #fff;
+}
