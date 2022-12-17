@@ -8,18 +8,19 @@
 }
 
 .App-header {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  height: 4em;
+  display: flex;
   font-size: calc(10px + 2vmin);
+  height: 4em;
+  justify-content: center;
+  margin-bottom: 2em;
 }
 
 .App-footer {
-  margin: 4em auto 0 auto;
-  text-align: center;
-  position: relative;
   bottom: 0;
-  width: 100%;
   height: 2em;
+  margin: 4em auto 0 auto;
+  position: relative;
+  text-align: center;
+  width: 100%;
 }
