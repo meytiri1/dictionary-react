@@ -1,0 +1,22 @@
+:root {
+  --primary-button: #9932cc;
+  --secondary-button: #cf40b6;
+  --tertiary-button: #5149c9;
+}
+
+.Meaning h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.Meaning .definition {
+  margin-bottom: 20px;
+}
+
+.Meaning .example {
+  color: var(--tertiary-button);
+  font-size: 0.85rem;
+  font-style: italic;
+  opacity: 0.8;
+}

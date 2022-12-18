@@ -3,7 +3,6 @@ import { Howl } from "howler";
 import "./Phonetics.css";
 
 export default function Phonetic(props) {
-  console.log(props.phonetic);
   function soundPlay() {
     const sound = new Howl({
       src: props.phonetic.audio,

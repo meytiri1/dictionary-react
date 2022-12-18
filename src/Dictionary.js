@@ -44,6 +44,7 @@ export default function Dictionary(props) {
               type="search"
               placeholder="Type a word"
               onChange={handleKeywordChange}
+              defaultValue={props.defaultKeyword}
               className="searchBar mb-2"
             />
             <div className="hint text-start ms-2 mb-2">
@@ -66,8 +67,21 @@ export default function Dictionary(props) {
       <div className="Dictionary">
         <h1>Dictionary App</h1>
         <form onSubmit={handleSubmit}>
-          <input type="search" onChange={handleKeywordChange} />
-          <input type="submit" value="Search" onSubmit={handleSubmit} />
+          <input
+            type="search"
+            placeholder="Type a word"
+            onChange={handleKeywordChange}
+            className="searchBar mb-2"
+          />
+          <div className="hint text-start ms-2 mb-2">
+            Suggested words: sunset, wine, yoga, plant...
+          </div>
+          <input
+            type="submit"
+            value="Search"
+            onSubmit={handleSubmit}
+            className="searchButton"
+          />
         </form>
         <div className="text-center">
           <BounceLoader

@@ -1,0 +1,21 @@
+:root {
+  --primary-button: #9932cc;
+  --secondary-button: #cf40b6;
+  --tertiary-button: #5149c9;
+}
+
+.Synonyms {
+  margin: 0.65em 0 1em 0;
+  padding: 0;
+}
+
+.Synonyms li {
+  border: 1px solid var(--tertiary-button);
+  border-radius: 10px;
+  font-size: 0.81rem;
+  display: inline-block;
+  line-height: 1;
+  margin-right: 0.6em;
+  margin-bottom: 0.5em;
+  padding: 6px 12px;
+}
