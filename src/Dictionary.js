@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Results from "./Results";
+import Photos from "./Photos";
 import axios from "axios";
 import BounceLoader from "react-spinners/BounceLoader";
 
@@ -9,15 +10,26 @@ export default function Dictionary(props) {
   const [keyword, setKeyword] = useState(props.defaultKeyword);
   const [results, setResults] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [photos, setPhotos] = useState(null);
 
   function handleResponse(response) {
-    console.log(response.data.length);
     setResults(response.data[0]);
   }
 
+  function handlePexelsResponse(response) {
+    console.log(response);
+    setPhotos(response.data.photos);
+  }
+
   function search() {
-    let apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
-    axios(apiURL).then(handleResponse);
+    const apiURL = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    axios.get(apiURL).then(handleResponse);
+
+    const pexelsApiKey =
+      "563492ad6f9170000100000123e6b8902d6d43ffb241d4e62c35627b";
+    const pexelsApiUrl = `https://api.pexels.com/v1/search?query=${keyword}&per_page=9`;
+    const headers = { Authorization: `Bearer ${pexelsApiKey}` };
+    axios.get(pexelsApiUrl, { headers: headers }).then(handlePexelsResponse);
   }
 
   function handleSubmit(event) {
@@ -45,9 +57,9 @@ export default function Dictionary(props) {
               placeholder="Type a word"
               onChange={handleKeywordChange}
               defaultValue={props.defaultKeyword}
-              className="searchBar mb-2"
+              className="searchBar mb-1"
             />
-            <div className="hint text-start ms-2 mb-2">
+            <div className="hint text-start ms-1 mb-2">
               Suggested words: sunset, wine, yoga, plant...
             </div>
             <input
@@ -59,6 +71,7 @@ export default function Dictionary(props) {
           </form>
         </section>
         <Results results={results} />
+        <Photos photos={photos} />
       </div>
     );
   } else {

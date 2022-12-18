@@ -4,20 +4,23 @@
   --tertiary-button: #5149c9;
 }
 
+.Meaning .definition {
+  margin-bottom: 25px;
+}
+
 .Meaning h3 {
   font-size: 1.5rem;
   font-weight: bold;
   line-height: 1.5;
 }
 
-.Meaning .definition {
-  margin-bottom: 20px;
+.Meaning span {
+  margin-bottom: 50px;
 }
 
 .Meaning .example {
   color: var(--tertiary-button);
   font-size: 0.85rem;
   font-style: italic;
-  margin-bottom: 20px;
   opacity: 0.8;
 }
