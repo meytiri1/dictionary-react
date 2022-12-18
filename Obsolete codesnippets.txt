@@ -14,3 +14,38 @@ const styles = {
     minHeight: "100vh",
   },
 };
+
+
+.Phonetic component:
+
+if (props.phonetic.audio && props.phonetic.text) {
+return (
+      <div className="Phonetic">
+        <button onClick={soundPlay} className="btn me-4">
+          Listen
+        </button>
+        <span className="my-auto">{props.phonetic.text}</span>
+      </div>
+    );
+  } else {
+    if (props.phonetic.text) {
+      return (
+        <div className="Phonetic">
+          <span className="my-auto">{props.phonetic.text}</span>
+        </div>
+      );
+    } else {
+      if (props.phonetic.audio) {
+        return (
+          <div className="Phonetic">
+            <button onClick={soundPlay} className="btn me-4">
+              Listen
+            </button>
+          </div>
+        );
+      } else {
+        return null;
+      }
+    }
+  }
+}

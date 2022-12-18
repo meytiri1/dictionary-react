@@ -3,6 +3,7 @@ import { Howl } from "howler";
 import "./Phonetics.css";
 
 export default function Phonetic(props) {
+  console.log(props.phonetic);
   function soundPlay() {
     const sound = new Howl({
       src: props.phonetic.audio,
@@ -14,34 +15,23 @@ export default function Phonetic(props) {
     sound.play();
   }
 
-  if (props.phonetic.audio && props.phonetic.text) {
+  if (props.phonetic.audio) {
     return (
       <div className="Phonetic">
-        <button onClick={soundPlay} className="btn me-4">
+        <button onClick={soundPlay} className="btn mb-2 me-4">
           Listen
         </button>
         <span className="my-auto">{props.phonetic.text}</span>
       </div>
     );
   } else {
-    if (props.phonetic.text) {
-      return (
-        <div className="Phonetic">
-          <span className="my-auto">{props.phonetic.text}</span>
-        </div>
-      );
-    } else {
-      if (props.phonetic.audio) {
-        return (
-          <div className="Phonetic">
-            <button onClick={soundPlay} className="btn me-4">
-              Listen
-            </button>
-          </div>
-        );
-      } else {
-        return null;
-      }
-    }
+    return (
+      <div className="Phonetic">
+        <button onClick={soundPlay} className="noAudioBtn mb-2 btn me-4">
+          Listen
+        </button>
+        <span className="my-auto">{props.phonetic.text}</span>
+      </div>
+    );
   }
 }

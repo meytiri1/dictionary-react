@@ -17,3 +17,13 @@
   background: rgb(219, 103, 199);
   color: #fff;
 }
+
+.Phonetic .noAudioBtn {
+  background: #a08d9c;
+  pointer-events: none;
+}
+
+.Phonetic span {
+  font-weight: bold;
+  opacity: 0.8;
+}
