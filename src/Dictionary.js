@@ -17,7 +17,6 @@ export default function Dictionary(props) {
   }
 
   function handlePexelsResponse(response) {
-    console.log(response);
     setPhotos(response.data.photos);
   }
 
@@ -96,7 +95,7 @@ export default function Dictionary(props) {
             className="searchButton"
           />
         </form>
-        <div className="text-center">
+        <div className="text-center mx-auto">
           <BounceLoader
             color="#9932cc"
             size={60}

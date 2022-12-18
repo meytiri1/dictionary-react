@@ -9,7 +9,7 @@ export default function Meaning(props) {
         <h3>{props.meaning.partOfSpeech}</h3>
         {props.meaning.definitions.map((definition, index) => {
           return (
-            <div key={index}>
+            <div key={index} className="mb-3">
               <span>{definition.definition}</span>
               <br />
               <span className="example">{definition.example}</span>
