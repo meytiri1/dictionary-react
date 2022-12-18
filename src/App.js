@@ -6,9 +6,10 @@ import background from "./images/background3.jpg";
 const styles = {
   container: {
     backgroundImage: `url(${background})`,
-    backgroundPosition: "center",
+    backgroundPosition: "top",
     backgroundSize: "100vw",
     backgroundRepeat: "repeat-y",
+    minHeight: "100vh",
   },
 };
 
