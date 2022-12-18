@@ -15,6 +15,12 @@
   font-style: italic;
   font-weight: bolder;
   margin-bottom: 0.8em;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .Dictionary h1 {
+    font-size: 2.5rem;
+  }
 }
 
 .Dictionary input {
