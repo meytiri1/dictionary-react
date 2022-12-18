@@ -95,14 +95,14 @@ export default function Dictionary(props) {
             className="searchButton"
           />
         </form>
-        <div className="text-center mx-auto">
+        <section className="text-center">
           <BounceLoader
             color="#9932cc"
             size={60}
             aria-label="Loading Spinner"
             data-testid="loader"
           />
-        </div>
+        </section>
       </div>
     );
   }

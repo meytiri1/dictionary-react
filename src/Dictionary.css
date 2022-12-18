@@ -10,8 +10,11 @@
 }
 
 .Dictionary h1 {
-  font-size: 3rem;
-  margin-bottom: 1em;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 3.1rem;
+  font-style: italic;
+  font-weight: bolder;
+  margin-bottom: 0.8em;
 }
 
 .Dictionary input {
