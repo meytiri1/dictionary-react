@@ -1,3 +1,9 @@
+:root {
+  --primary-button: #9932cc;
+  --secondary-button: #cf40b6;
+  --tertiary-button: #5149c9;
+}
+
 .App {
   background: #d5c3ed;
   margin: 0;
@@ -18,9 +24,14 @@
 
 .App-footer {
   bottom: 0;
-  height: 2em;
+  height: 4em;
   margin: 4em auto 0 auto;
   position: relative;
   text-align: center;
   width: 100%;
+}
+
+.App a {
+  color: var(--tertiary-button);
+  text-decoration: none;
 }

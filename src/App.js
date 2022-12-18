@@ -28,14 +28,25 @@ function App() {
         <Dictionary defaultKeyword="sunset" />
       </main>
       <footer className="App-footer">
-        Coded by{" "}
+        This project was coded by{" "}
+        <a
+          href="https://bright-centaur-7034e8.netlify.app/"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Michelle Köhler
+        </a>{" "}
+        and
+        <br />
+        is{" "}
         <a
           href="https://github.com/meytiri1/dictionary-react"
           target="_blank"
           rel="noreferrer noopener"
         >
-          Michelle Köhler
+          open-sourced on GitHub{" "}
         </a>
+        and hosted on Netlify
       </footer>
     </div>
   );
