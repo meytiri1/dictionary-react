@@ -51,66 +51,44 @@ export default function Dictionary(props) {
   }
 
   if (loaded) {
-    if (errorMessage) {
-      return (
-        <div className="Dictionary">
-          <section className="text-center">
-            <h1>Dictionary App</h1>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                placeholder="Type a word"
-                onChange={handleKeywordChange}
-                className="searchBar mb-2"
-              />
-              <div className="hint text-start ms-2 mb-2">
-                Suggested words: sunset, wine, yoga, plant...
-              </div>
-              <input
-                type="submit"
-                value="Search"
-                onSubmit={handleSubmit}
-                className="searchButton"
-              />
-            </form>
-          </section>
+    return (
+      <div className="Dictionary">
+        <section className="text-center">
+          <h1>Dictionary App</h1>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="search"
+              placeholder="Type a word"
+              onChange={handleKeywordChange}
+              defaultValue={props.defaultKeyword}
+              className="searchBar mb-1"
+            />
+            <div className="hint text-start ms-1 mb-2">
+              Suggested words: sunset, wine, yoga, plant...
+            </div>
+            <input
+              type="submit"
+              value="Search"
+              onSubmit={handleSubmit}
+              className="searchButton"
+            />
+          </form>
+        </section>
+        {errorMessage ? (
           <section className="text-center">
             <p>
               Sorry, the word you were searching for could not be found in the
               data base. Please try another word...
             </p>
           </section>
-        </div>
-      );
-    } else {
-      return (
-        <div className="Dictionary">
-          <section className="text-center">
-            <h1>Dictionary App</h1>
-            <form onSubmit={handleSubmit}>
-              <input
-                type="search"
-                placeholder="Type a word"
-                onChange={handleKeywordChange}
-                defaultValue={props.defaultKeyword}
-                className="searchBar mb-1"
-              />
-              <div className="hint text-start ms-1 mb-2">
-                Suggested words: sunset, wine, yoga, plant...
-              </div>
-              <input
-                type="submit"
-                value="Search"
-                onSubmit={handleSubmit}
-                className="searchButton"
-              />
-            </form>
-          </section>
-          <Results results={results} />
-          <Photos photos={photos} />
-        </div>
-      );
-    }
+        ) : (
+          <>
+            <Results results={results} />
+            <Photos photos={photos} />
+          </>
+        )}
+      </div>
+    );
   } else {
     load();
     return (
