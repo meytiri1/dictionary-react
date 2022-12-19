@@ -14,6 +14,7 @@ export default function Dictionary(props) {
   const [errorMessage, setErrorMessage] = useState(false);
 
   function handleResponse(response) {
+    setErrorMessage(false);
     setResults(response.data[0]);
   }
 
